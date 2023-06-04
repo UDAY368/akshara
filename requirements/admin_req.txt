@@ -1,0 +1,32 @@
+******************************************* ADMIN REQUIREMENTS *********************************
+--> user
+    - user create
+        - name
+        - username
+        - password
+        - email
+        - mobileNo
+        - roles
+        - url >>> {{localUrl}}/user/create
+    - login
+        - username
+        - password
+        - url >> {{aws}}/auth/login
+--> add survey questions
+        - questionName
+        - options
+            - [\n \"Jagan\", \"pawan kalyan\", \"cbn\"\n]
+        - url >>> {{aws}}/questions/create
+--> save survey
+        - username
+        - surveyOptions
+            - [\n {\n \"questionId\": \"QSN2305311816450005\",\n\"answer\":\"Cbn\"\n}\n]
+        - url >>> {{aws}}/survey/save
+--> filter
+        - questionId
+        - username
+        - surveyor
+        - url >>> {{aws}}/survey/fetch
+--> fetch
+        - raw {body}
+        - url >>> http://survey-ap.us-east-1.elasticbeanstalk.com/survey/api/1.0/fetch/questions

@@ -1,0 +1,889 @@
+{
+    "collection": {
+        "info": {
+            "_postman_id": "0a2ff6c4-704c-4cce-9565-15575e733873",
+            "name": "Survey",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+            "updatedAt": "2023-05-31T18:08:11.000Z",
+            "uid": "14218316-0a2ff6c4-704c-4cce-9565-15575e733873"
+        },
+        "item": [
+            {
+                "name": "user",
+                "item": [
+                    {
+                        "name": "user create",
+                        "id": "d52ea79f-4d51-4218-95ff-dace15079b72",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "auth": {
+                                "type": "bearer",
+                                "bearer": [
+                                    {
+                                        "key": "token",
+                                        "value": "{{token}}",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\n    \"name\":\"Narasimha\",\n    \"username\":\"8186094547\",\n    \"password\":\"12345678N\",\n    \"email\" :\"survey-dev@survey.com\",\n    \"mobileNo\":\"123356789\",\n    \"roles\":\"SUPPORT\"\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{localUrl}}/user/create",
+                                "host": [
+                                    "{{localUrl}}"
+                                ],
+                                "path": [
+                                    "user",
+                                    "create"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "1442a703-7d01-4f1a-b336-ceba63bda1c2",
+                                "name": "New Request",
+                                "originalRequest": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n    \"name\":\"Narasimha\",\n    \"username\":\"8186094547\",\n    \"password\":\"12345678N\",\n    \"email\" :\"survey-dev@survey.com\",\n    \"mobileNo\":\"123356789\",\n    \"roles\":\"SUPPORT\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{localUrl}}/user/create",
+                                        "host": [
+                                            "{{localUrl}}"
+                                        ],
+                                        "path": [
+                                            "user",
+                                            "create"
+                                        ]
+                                    }
+                                },
+                                "status": "OK",
+                                "code": 200,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Vary",
+                                        "value": "Origin"
+                                    },
+                                    {
+                                        "key": "Vary",
+                                        "value": "Access-Control-Request-Method"
+                                    },
+                                    {
+                                        "key": "Vary",
+                                        "value": "Access-Control-Request-Headers"
+                                    },
+                                    {
+                                        "key": "X-Content-Type-Options",
+                                        "value": "nosniff"
+                                    },
+                                    {
+                                        "key": "X-XSS-Protection",
+                                        "value": "1; mode=block"
+                                    },
+                                    {
+                                        "key": "Cache-Control",
+                                        "value": "no-cache, no-store, max-age=0, must-revalidate"
+                                    },
+                                    {
+                                        "key": "Pragma",
+                                        "value": "no-cache"
+                                    },
+                                    {
+                                        "key": "Expires",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "key": "X-Frame-Options",
+                                        "value": "DENY"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Transfer-Encoding",
+                                        "value": "chunked"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Mon, 29 May 2023 18:13:29 GMT"
+                                    },
+                                    {
+                                        "key": "Keep-Alive",
+                                        "value": "timeout=60"
+                                    },
+                                    {
+                                        "key": "Connection",
+                                        "value": "keep-alive"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"success\": true,\n    \"response\": {\n        \"username\": \"8186094547\",\n        \"name\": \"Narasimha\",\n        \"email\": \"survey-dev@survey.com\",\n        \"mobileNo\": \"123356789\",\n        \"roles\": \"SUPPORT\",\n        \"status\": \"ACTIVE\",\n        \"expires\": 0\n    },\n    \"successCode\": \"USER_CREATED_SUCCESSFULLY\",\n    \"successMessage\": \"User creation successful\",\n    \"realCode\": \"SURVEY_00002\"\n}",
+                                "uid": "14218316-1442a703-7d01-4f1a-b336-ceba63bda1c2"
+                            }
+                        ],
+                        "uid": "14218316-d52ea79f-4d51-4218-95ff-dace15079b72"
+                    },
+                    {
+                        "name": "login",
+                        "id": "c0aa219e-b8ba-4cfd-b8a6-116e41863503",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\n    \"username\":\"8186094547\",\n    \"password\":\"12345678N\"\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{aws}}/auth/login",
+                                "host": [
+                                    "{{aws}}"
+                                ],
+                                "path": [
+                                    "auth",
+                                    "login"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "04fb1e1e-a0a4-4721-92ab-ce1e011c69c9",
+                                "name": "user create Copy",
+                                "originalRequest": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n    \"username\":\"8186094547\",\n    \"password\":\"12345678N\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{localUrl}}/auth/login",
+                                        "host": [
+                                            "{{localUrl}}"
+                                        ],
+                                        "path": [
+                                            "auth",
+                                            "login"
+                                        ]
+                                    }
+                                },
+                                "status": "OK",
+                                "code": 200,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Vary",
+                                        "value": "Origin"
+                                    },
+                                    {
+                                        "key": "Vary",
+                                        "value": "Access-Control-Request-Method"
+                                    },
+                                    {
+                                        "key": "Vary",
+                                        "value": "Access-Control-Request-Headers"
+                                    },
+                                    {
+                                        "key": "X-Content-Type-Options",
+                                        "value": "nosniff"
+                                    },
+                                    {
+                                        "key": "X-XSS-Protection",
+                                        "value": "1; mode=block"
+                                    },
+                                    {
+                                        "key": "Cache-Control",
+                                        "value": "no-cache, no-store, max-age=0, must-revalidate"
+                                    },
+                                    {
+                                        "key": "Pragma",
+                                        "value": "no-cache"
+                                    },
+                                    {
+                                        "key": "Expires",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "key": "X-Frame-Options",
+                                        "value": "DENY"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Transfer-Encoding",
+                                        "value": "chunked"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Mon, 29 May 2023 18:28:50 GMT"
+                                    },
+                                    {
+                                        "key": "Keep-Alive",
+                                        "value": "timeout=60"
+                                    },
+                                    {
+                                        "key": "Connection",
+                                        "value": "keep-alive"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"success\": true,\n    \"response\": {\n        \"username\": \"8186094547\",\n        \"name\": \"Narasimha\",\n        \"email\": \"survey-dev@survey.com\",\n        \"mobileNo\": \"123356789\",\n        \"roles\": \"ROLE_ADMIN\",\n        \"status\": \"ACTIVE\",\n        \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4MTg2MDk0NTQ3Iiwicm9sZXMiOiJST0xFX0FETUlOIiwiZXhwIjoxNjg1NDcxMzMwLCJpYXQiOjE2ODUzODQ5MzB9.QDjFbFCGs6S8vKo6r09au3QcxG_5O8yIk4meliMILBsSxCK7j3UO6gSSdPMn7VUJE9HHQsAWvvlliq9NQc72qw\",\n        \"expires\": 86400\n    },\n    \"successCode\": \"USER_LOGIN_SUCCESSFUL\",\n    \"successMessage\": \"User logged in successfully\",\n    \"realCode\": \"SURVEY_00001\"\n}",
+                                "uid": "14218316-04fb1e1e-a0a4-4721-92ab-ce1e011c69c9"
+                            }
+                        ],
+                        "uid": "14218316-c0aa219e-b8ba-4cfd-b8a6-116e41863503"
+                    }
+                ],
+                "id": "ff3a831e-05cd-4281-90d5-d78cada3eec7",
+                "uid": "14218316-ff3a831e-05cd-4281-90d5-d78cada3eec7"
+            },
+            {
+                "name": "add survey questions",
+                "id": "18b6ad05-06bb-4d7e-ad65-8b069b351228",
+                "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                },
+                "request": {
+                    "auth": {
+                        "type": "bearer",
+                        "bearer": [
+                            {
+                                "key": "token",
+                                "value": "{{token}}",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                        "mode": "raw",
+                        "raw": "[\n    {\n        \"questionName\":\"who is the next CM\",\n        \"options\":[\n            \"Jagan\", \"pawan kalyan\", \"cbn\"\n        ]\n    }\n]",
+                        "options": {
+                            "raw": {
+                                "language": "json"
+                            }
+                        }
+                    },
+                    "url": {
+                        "raw": "{{aws}}/questions/create",
+                        "host": [
+                            "{{aws}}"
+                        ],
+                        "path": [
+                            "questions",
+                            "create"
+                        ]
+                    }
+                },
+                "response": [
+                    {
+                        "id": "f4bf95d9-16f8-450d-8145-eef05f57c661",
+                        "name": "add survey questions",
+                        "originalRequest": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "[\n    {\n        \"questionName\":\"whom to you vote for the upcoming election on 2024.\",\n        \"options\":[\n            \"Jagan\", \"pawan kalyan\", \"cbn\"\n        ]\n    },\n    {\n        \"questionName\":\"who will win the election in 2024.\",\n        \"options\":[\n            \"Jagan\", \"pawan kalyan\", \"cbn\"\n        ]\n    }\n]",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "http://localhost:7091/survey/api/1.0/questions/create",
+                                "protocol": "http",
+                                "host": [
+                                    "localhost"
+                                ],
+                                "port": "7091",
+                                "path": [
+                                    "survey",
+                                    "api",
+                                    "1.0",
+                                    "questions",
+                                    "create"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [
+                            {
+                                "key": "Vary",
+                                "value": "Origin"
+                            },
+                            {
+                                "key": "Vary",
+                                "value": "Access-Control-Request-Method"
+                            },
+                            {
+                                "key": "Vary",
+                                "value": "Access-Control-Request-Headers"
+                            },
+                            {
+                                "key": "X-Content-Type-Options",
+                                "value": "nosniff"
+                            },
+                            {
+                                "key": "X-XSS-Protection",
+                                "value": "1; mode=block"
+                            },
+                            {
+                                "key": "Cache-Control",
+                                "value": "no-cache, no-store, max-age=0, must-revalidate"
+                            },
+                            {
+                                "key": "Pragma",
+                                "value": "no-cache"
+                            },
+                            {
+                                "key": "Expires",
+                                "value": "0"
+                            },
+                            {
+                                "key": "X-Frame-Options",
+                                "value": "DENY"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Transfer-Encoding",
+                                "value": "chunked"
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 29 May 2023 18:29:33 GMT"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=60"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            }
+                        ],
+                        "cookie": [],
+                        "responseTime": null,
+                        "body": "{\n    \"success\": true,\n    \"response\": [\n        {\n            \"id\": \"QSN2305292359180001\",\n            \"questionName\": \"whom to you vote for the upcoming election on 2024.\",\n            \"options\": [\n                \"Jagan\",\n                \"pawan kalyan\",\n                \"cbn\"\n            ],\n            \"status\": \"ACTIVE\"\n        },\n        {\n            \"id\": \"QSN2305292359180002\",\n            \"questionName\": \"who will win the election in 2024.\",\n            \"options\": [\n                \"Jagan\",\n                \"pawan kalyan\",\n                \"cbn\"\n            ],\n            \"status\": \"ACTIVE\"\n        }\n    ]\n}",
+                        "uid": "14218316-f4bf95d9-16f8-450d-8145-eef05f57c661"
+                    }
+                ],
+                "uid": "14218316-18b6ad05-06bb-4d7e-ad65-8b069b351228"
+            },
+            {
+                "name": "save survey",
+                "id": "9399c2e9-ff7f-47d8-acf4-b2fcf594f5e5",
+                "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                },
+                "request": {
+                    "auth": {
+                        "type": "bearer",
+                        "bearer": [
+                            {
+                                "key": "token",
+                                "value": "{{token}}",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                        "mode": "raw",
+                        "raw": "{\n    \"username\":\"8186094547\",\n    \"surveyOptions\":[\n        {\n            \"questionId\": \"QSN2305311816450005\",\n            \"answer\":\"Cbn\"\n        }\n    ]\n}",
+                        "options": {
+                            "raw": {
+                                "language": "json"
+                            }
+                        }
+                    },
+                    "url": {
+                        "raw": "{{aws}}/survey/save",
+                        "host": [
+                            "{{aws}}"
+                        ],
+                        "path": [
+                            "survey",
+                            "save"
+                        ]
+                    }
+                },
+                "response": [
+                    {
+                        "id": "4b07e4c1-8be0-4502-8d71-2989c50e8ce2",
+                        "name": "save survey",
+                        "originalRequest": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\n    \"username\":\"8186094547\",\n    \"surveyOptions\":[\n        {\n            \"questionId\": \"QSN2305292359180001\",\n            \"answer\":\"Cbn\"\n        },\n        {\n            \"questionId\": \"QSN2305292359180002\",\n            \"answer\":\"Cbn\"\n        }\n    ]\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "http://localhost:7091/survey/api/1.0/survey/save",
+                                "protocol": "http",
+                                "host": [
+                                    "localhost"
+                                ],
+                                "port": "7091",
+                                "path": [
+                                    "survey",
+                                    "api",
+                                    "1.0",
+                                    "survey",
+                                    "save"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [
+                            {
+                                "key": "Vary",
+                                "value": "Origin"
+                            },
+                            {
+                                "key": "Vary",
+                                "value": "Access-Control-Request-Method"
+                            },
+                            {
+                                "key": "Vary",
+                                "value": "Access-Control-Request-Headers"
+                            },
+                            {
+                                "key": "X-Content-Type-Options",
+                                "value": "nosniff"
+                            },
+                            {
+                                "key": "X-XSS-Protection",
+                                "value": "1; mode=block"
+                            },
+                            {
+                                "key": "Cache-Control",
+                                "value": "no-cache, no-store, max-age=0, must-revalidate"
+                            },
+                            {
+                                "key": "Pragma",
+                                "value": "no-cache"
+                            },
+                            {
+                                "key": "Expires",
+                                "value": "0"
+                            },
+                            {
+                                "key": "X-Frame-Options",
+                                "value": "DENY"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Transfer-Encoding",
+                                "value": "chunked"
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 29 May 2023 18:32:58 GMT"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=60"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            }
+                        ],
+                        "cookie": [],
+                        "responseTime": null,
+                        "body": "{\n    \"success\": true,\n    \"response\": [\n        {\n            \"questionId\": \"QSN2305292359180001\",\n            \"answer\": \"Cbn\",\n            \"username\": \"8186094547\",\n            \"surveyor\": \"8186094547\"\n        },\n        {\n            \"questionId\": \"QSN2305292359180002\",\n            \"answer\": \"Cbn\",\n            \"username\": \"8186094547\",\n            \"surveyor\": \"8186094547\"\n        }\n    ]\n}",
+                        "uid": "14218316-4b07e4c1-8be0-4502-8d71-2989c50e8ce2"
+                    }
+                ],
+                "uid": "14218316-9399c2e9-ff7f-47d8-acf4-b2fcf594f5e5"
+            },
+            {
+                "name": "filter",
+                "id": "fbd15ef2-1d61-4678-93c7-ea677d82810e",
+                "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                },
+                "request": {
+                    "auth": {
+                        "type": "bearer",
+                        "bearer": [
+                            {
+                                "key": "token",
+                                "value": "{{token}}",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                        "mode": "raw",
+                        "raw": "{\n    \"questionId\": \"\",\n    \"username\":\"8186094547\",\n    \"surveyor\":\"\"\n}",
+                        "options": {
+                            "raw": {
+                                "language": "json"
+                            }
+                        }
+                    },
+                    "url": {
+                        "raw": "{{aws}}/survey/fetch",
+                        "host": [
+                            "{{aws}}"
+                        ],
+                        "path": [
+                            "survey",
+                            "fetch"
+                        ]
+                    }
+                },
+                "response": [
+                    {
+                        "id": "5f486f62-6193-48d9-9748-6f8bc04a1374",
+                        "name": "filter",
+                        "originalRequest": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\n    \"questionId\": \"\",\n    \"username\":\"8186094547\",\n    \"surveyor\":\"\"\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "http://localhost:7091/survey/api/1.0/survey/fetch",
+                                "protocol": "http",
+                                "host": [
+                                    "localhost"
+                                ],
+                                "port": "7091",
+                                "path": [
+                                    "survey",
+                                    "api",
+                                    "1.0",
+                                    "survey",
+                                    "fetch"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [
+                            {
+                                "key": "Vary",
+                                "value": "Origin"
+                            },
+                            {
+                                "key": "Vary",
+                                "value": "Access-Control-Request-Method"
+                            },
+                            {
+                                "key": "Vary",
+                                "value": "Access-Control-Request-Headers"
+                            },
+                            {
+                                "key": "X-Content-Type-Options",
+                                "value": "nosniff"
+                            },
+                            {
+                                "key": "X-XSS-Protection",
+                                "value": "1; mode=block"
+                            },
+                            {
+                                "key": "Cache-Control",
+                                "value": "no-cache, no-store, max-age=0, must-revalidate"
+                            },
+                            {
+                                "key": "Pragma",
+                                "value": "no-cache"
+                            },
+                            {
+                                "key": "Expires",
+                                "value": "0"
+                            },
+                            {
+                                "key": "X-Frame-Options",
+                                "value": "DENY"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Transfer-Encoding",
+                                "value": "chunked"
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 29 May 2023 18:37:51 GMT"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=60"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            }
+                        ],
+                        "cookie": [],
+                        "responseTime": null,
+                        "body": "{\n    \"success\": true,\n    \"response\": {\n        \"offset\": 0,\n        \"limit\": 9223372036854775807,\n        \"totalElements\": 2,\n        \"surveys\": [\n            {\n                \"questionId\": \"QSN2305292359180002\",\n                \"answer\": \"Cbn\",\n                \"username\": \"8186094547\",\n                \"surveyor\": \"8186094547\"\n            },\n            {\n                \"questionId\": \"QSN2305292359180001\",\n                \"answer\": \"Cbn\",\n                \"username\": \"8186094547\",\n                \"surveyor\": \"8186094547\"\n            }\n        ]\n    }\n}",
+                        "uid": "14218316-5f486f62-6193-48d9-9748-6f8bc04a1374"
+                    }
+                ],
+                "uid": "14218316-fbd15ef2-1d61-4678-93c7-ea677d82810e"
+            },
+            {
+                "name": "fatch",
+                "id": "0037fa4f-a051-4ab7-9b1b-a7b77ab810ce",
+                "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                },
+                "request": {
+                    "auth": {
+                        "type": "bearer",
+                        "bearer": [
+                            {
+                                "key": "token",
+                                "value": "{{token}}",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                        "mode": "raw",
+                        "raw": "{}",
+                        "options": {
+                            "raw": {
+                                "language": "json"
+                            }
+                        }
+                    },
+                    "url": {
+                        "raw": "http://survey-ap.us-east-1.elasticbeanstalk.com/survey/api/1.0/fetch/questions",
+                        "protocol": "http",
+                        "host": [
+                            "survey-ap",
+                            "us-east-1",
+                            "elasticbeanstalk",
+                            "com"
+                        ],
+                        "path": [
+                            "survey",
+                            "api",
+                            "1.0",
+                            "fetch",
+                            "questions"
+                        ]
+                    }
+                },
+                "response": [
+                    {
+                        "id": "02fcfddc-4a2d-4835-abac-35cbc04d8153",
+                        "name": "fatch",
+                        "originalRequest": {
+                            "method": "GET",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "http://localhost:7091/survey/api/1.0/fetch/questions",
+                                "protocol": "http",
+                                "host": [
+                                    "localhost"
+                                ],
+                                "port": "7091",
+                                "path": [
+                                    "survey",
+                                    "api",
+                                    "1.0",
+                                    "fetch",
+                                    "questions"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [
+                            {
+                                "key": "Vary",
+                                "value": "Origin"
+                            },
+                            {
+                                "key": "Vary",
+                                "value": "Access-Control-Request-Method"
+                            },
+                            {
+                                "key": "Vary",
+                                "value": "Access-Control-Request-Headers"
+                            },
+                            {
+                                "key": "X-Content-Type-Options",
+                                "value": "nosniff"
+                            },
+                            {
+                                "key": "X-XSS-Protection",
+                                "value": "1; mode=block"
+                            },
+                            {
+                                "key": "Cache-Control",
+                                "value": "no-cache, no-store, max-age=0, must-revalidate"
+                            },
+                            {
+                                "key": "Pragma",
+                                "value": "no-cache"
+                            },
+                            {
+                                "key": "Expires",
+                                "value": "0"
+                            },
+                            {
+                                "key": "X-Frame-Options",
+                                "value": "DENY"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Transfer-Encoding",
+                                "value": "chunked"
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 29 May 2023 18:37:43 GMT"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=60"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            }
+                        ],
+                        "cookie": [],
+                        "responseTime": null,
+                        "body": "{\n    \"success\": true,\n    \"response\": [\n        {\n            \"id\": \"QSN2305292359180001\",\n            \"questionName\": \"whom to you vote for the upcoming election on 2024.\",\n            \"options\": [\n                \"Jagan\",\n                \"pawan kalyan\",\n                \"cbn\"\n            ],\n            \"status\": \"ACTIVE\"\n        },\n        {\n            \"id\": \"QSN2305292359180002\",\n            \"questionName\": \"who will win the election in 2024.\",\n            \"options\": [\n                \"Jagan\",\n                \"pawan kalyan\",\n                \"cbn\"\n            ],\n            \"status\": \"ACTIVE\"\n        }\n    ]\n}",
+                        "uid": "14218316-02fcfddc-4a2d-4835-abac-35cbc04d8153"
+                    }
+                ],
+                "uid": "14218316-0037fa4f-a051-4ab7-9b1b-a7b77ab810ce"
+            }
+        ],
+        "event": [
+            {
+                "listen": "prerequest",
+                "script": {
+                    "id": "262ec843-6e2b-45b2-929d-a3f27ecd2f2d",
+                    "type": "text/javascript",
+                    "exec": [
+                        ""
+                    ]
+                }
+            },
+            {
+                "listen": "test",
+                "script": {
+                    "id": "656da792-4aa6-4ea6-816b-ec0db86d09e5",
+                    "type": "text/javascript",
+                    "exec": [
+                        ""
+                    ]
+                }
+            }
+        ],
+        "variable": [
+            {
+                "id": "d07f38ca-3520-4f4e-a1f3-6ca607d3a50f",
+                "key": "localUrl",
+                "value": "http://localhost:7091/survey/api/1.0",
+                "type": "string"
+            },
+            {
+                "id": "1e6847f0-8372-44c3-b542-dab2d437449a",
+                "key": "aws",
+                "value": "http://survey-ap.us-east-1.elasticbeanstalk.com/survey/api/1.0",
+                "type": "string"
+            },
+            {
+                "id": "4d6ddaf7-6c51-41dd-81f3-bc60709d29ed",
+                "key": "token",
+                "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4MTg2MDk0NTQ3Iiwicm9sZXMiOiJST0xFX0FETUlOIiwiZXhwIjoxNjg1NjQyNzcwLCJpYXQiOjE2ODU1NTYzNzB9.H2wXSmxDYtjkSnBgj-9hZ_CeXmIjTzrGHt5FCW3OsPqyB7lwjbrmt-C0Fm35FmK_j5-nHlae4IEwnpA-1imkWw",
+                "type": "string"
+            }
+        ]
+    }
+}
